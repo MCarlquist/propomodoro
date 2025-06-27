@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "author": "Max Carlquist",
   "bin": {
-    "promo": "./bin/run.js"
+    "promo": "bin/run.js"
   },
   "bugs": "https://github.com/MCarlquist/propomodoro/issues",
   "dependencies": {
@@ -65,7 +65,7 @@
     "topicSeparator": " ",
     "topics": {
       "hello": {
-        "description": "Say hello to the world and others"
+        "description": "A Pomodoro style Timer for developers"
       }
     },
     "update": {
@@ -81,7 +81,10 @@
       "s3": false
     }
   },
-  "repository": "MCarlquist/propomodoro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MCarlquist/propomodoro.git"
+  },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint",

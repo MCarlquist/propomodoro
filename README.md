@@ -12,6 +12,7 @@ A Pomodoro style Timer
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
+* [Test change](#test-change)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
@@ -20,7 +21,7 @@ $ npm install -g propomodoro
 $ promo COMMAND
 running command...
 $ promo (--version)
-propomodoro/0.0.0 darwin-x64 node-v20.17.0
+propomodoro/0.0.0 linux-x64 node-v22.16.0
 $ promo --help [COMMAND]
 USAGE
   $ promo COMMAND
@@ -29,10 +30,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`promo analytics`](#promo-analytics)
 * [`promo autocomplete [SHELL]`](#promo-autocomplete-shell)
-* [`promo hello PERSON`](#promo-hello-person)
-* [`promo hello world`](#promo-hello-world)
 * [`promo help [COMMAND]`](#promo-help-command)
 * [`promo plugins`](#promo-plugins)
 * [`promo plugins add PLUGIN`](#promo-plugins-add-plugin)
@@ -44,22 +42,7 @@ USAGE
 * [`promo plugins uninstall [PLUGIN]`](#promo-plugins-uninstall-plugin)
 * [`promo plugins unlink [PLUGIN]`](#promo-plugins-unlink-plugin)
 * [`promo plugins update`](#promo-plugins-update)
-* [`promo start`](#promo-start)
 * [`promo update [CHANNEL]`](#promo-update-channel)
-
-## `promo analytics`
-
-Display analytics for your Pomodoro sessions
-
-```
-USAGE
-  $ promo analytics
-
-DESCRIPTION
-  Display analytics for your Pomodoro sessions
-```
-
-_See code: [src/commands/analytics.ts](https://github.com/MCarlquist/propomodoro/blob/v0.0.0/src/commands/analytics.ts)_
 
 ## `promo autocomplete [SHELL]`
 
@@ -91,48 +74,6 @@ EXAMPLES
 ```
 
 _See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v3.2.31/src/commands/autocomplete/index.ts)_
-
-## `promo hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ promo hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ promo hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [src/commands/hello/index.ts](https://github.com/MCarlquist/propomodoro/blob/v0.0.0/src/commands/hello/index.ts)_
-
-## `promo hello world`
-
-Say hello world
-
-```
-USAGE
-  $ promo hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ promo hello world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [src/commands/hello/world.ts](https://github.com/MCarlquist/propomodoro/blob/v0.0.0/src/commands/hello/world.ts)_
 
 ## `promo help [COMMAND]`
 
@@ -443,24 +384,6 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.42/src/commands/plugins/update.ts)_
-
-## `promo start`
-
-Start a Pomodoro timer session with adjustable intensity
-
-```
-USAGE
-  $ promo start [--intensity low|medium|high]
-
-FLAGS
-  --intensity=<option>  Work intensity level
-                        <options: low|medium|high>
-
-DESCRIPTION
-  Start a Pomodoro timer session with adjustable intensity
-```
-
-_See code: [src/commands/start.ts](https://github.com/MCarlquist/propomodoro/blob/v0.0.0/src/commands/start.ts)_
 
 ## `promo update [CHANNEL]`
 
