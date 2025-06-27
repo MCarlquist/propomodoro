@@ -1,0 +1,98 @@
+{
+  "name": "propomodoro",
+  "description": "A Pomodoro style Timer",
+  "version": "0.0.0",
+  "author": "Max Carlquist",
+  "bin": {
+    "promo": "./bin/run.js"
+  },
+  "bugs": "https://github.com/MCarlquist/propomodoro/issues",
+  "dependencies": {
+    "@oclif/core": "^4",
+    "@oclif/plugin-autocomplete": "^3.2.31",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-plugins": "^5",
+    "@oclif/plugin-update": "^4.6.45",
+    "@supabase/supabase-js": "^2.50.2",
+    "@types/terminal-kit": "^2.5.7",
+    "inquirer": "*",
+    "node-notifier": "*",
+    "terminal-kit": "*"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1",
+    "@oclif/prettier-config": "^0.2.1",
+    "@oclif/test": "^4",
+    "@types/chai": "^4",
+    "@types/mocha": "^10",
+    "@types/node": "^18",
+    "@types/node-notifier": "^8.0.5",
+    "chai": "^4",
+    "eslint": "^9",
+    "eslint-config-oclif": "^6",
+    "eslint-config-prettier": "^10",
+    "mocha": "^10",
+    "oclif": "^4",
+    "shx": "^0.3.3",
+    "ts-node": "^10",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "./bin",
+    "./dist",
+    "./oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/MCarlquist/propomodoro",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "type": "module",
+  "oclif": {
+    "bin": "promo",
+    "dirname": "promo",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins",
+      "@oclif/plugin-update",
+      "@oclif/plugin-autocomplete"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    },
+    "update": {
+      "node": {
+        "version": "18.0.0",
+        "targets": [
+          "linux-x64",
+          "darwin-x64",
+          "darwin-arm64",
+          "win32-x64"
+        ]
+      },
+      "s3": false
+    }
+  },
+  "repository": "MCarlquist/propomodoro",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md",
+    "dev": "yarn build && node ./bin/run.js",
+    "dev:watch": "tsc -b --watch",
+    "dev:ts": "ts-node --esm --transpile-only ./bin/run.js"
+  },
+  "types": "dist/index.d.ts"
+}
