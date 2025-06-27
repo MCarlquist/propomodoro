@@ -21,7 +21,7 @@ $ npm install -g propomodoro
 $ promo COMMAND
 running command...
 $ promo (--version)
-propomodoro/0.0.0 linux-x64 node-v22.16.0
+propomodoro/0.0.1 linux-x64 node-v22.16.0
 $ promo --help [COMMAND]
 USAGE
   $ promo COMMAND
@@ -30,6 +30,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`promo analytics`](#promo-analytics)
 * [`promo autocomplete [SHELL]`](#promo-autocomplete-shell)
 * [`promo help [COMMAND]`](#promo-help-command)
 * [`promo plugins`](#promo-plugins)
@@ -42,7 +43,22 @@ USAGE
 * [`promo plugins uninstall [PLUGIN]`](#promo-plugins-uninstall-plugin)
 * [`promo plugins unlink [PLUGIN]`](#promo-plugins-unlink-plugin)
 * [`promo plugins update`](#promo-plugins-update)
+* [`promo start`](#promo-start)
 * [`promo update [CHANNEL]`](#promo-update-channel)
+
+## `promo analytics`
+
+Display analytics for your Pomodoro sessions
+
+```
+USAGE
+  $ promo analytics
+
+DESCRIPTION
+  Display analytics for your Pomodoro sessions
+```
+
+_See code: [src/commands/analytics.ts](https://github.com/MCarlquist/propomodoro/blob/v0.0.1/src/commands/analytics.ts)_
 
 ## `promo autocomplete [SHELL]`
 
@@ -384,6 +400,24 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.42/src/commands/plugins/update.ts)_
+
+## `promo start`
+
+Start a Pomodoro timer session with adjustable intensity
+
+```
+USAGE
+  $ promo start [--intensity low|medium|high]
+
+FLAGS
+  --intensity=<option>  Work intensity level
+                        <options: low|medium|high>
+
+DESCRIPTION
+  Start a Pomodoro timer session with adjustable intensity
+```
+
+_See code: [src/commands/start.ts](https://github.com/MCarlquist/propomodoro/blob/v0.0.1/src/commands/start.ts)_
 
 ## `promo update [CHANNEL]`
 

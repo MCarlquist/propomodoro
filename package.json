@@ -1,7 +1,7 @@
 {
   "name": "propomodoro",
   "description": "A Pomodoro style Timer for developers",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Max Carlquist",
   "bin": {
     "promo": "bin/run.js"
