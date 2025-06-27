@@ -500,3 +500,4 @@ EXAMPLES
 
 _See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v4.6.45/src/commands/update.ts)_
 <!-- commandsstop -->
+# Test change

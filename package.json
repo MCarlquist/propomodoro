@@ -1,6 +1,6 @@
 {
   "name": "propomodoro",
-  "description": "A Pomodoro style Timer",
+  "description": "A Pomodoro style Timer for developers",
   "version": "0.0.0",
   "author": "Max Carlquist",
   "bin": {
