@@ -1,4 +1,6 @@
-propomodoro
+## propomodoro
+=================
+![Top Lang](https://img.shields.io/github/languages/top/MCarluist/propomodor)
 =================
 
 A Pomodoro style Timer
